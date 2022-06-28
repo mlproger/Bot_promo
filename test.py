@@ -11,6 +11,7 @@ from telethon.tl.types import (PeerChannel)
 config = configparser.ConfigParser()
 config.read("config.ini")
 
+
 api_id = config['Telegram']['api_id']
 api_hash = config['Telegram']['api_hash']
 
@@ -31,6 +32,7 @@ async def moveC(s):
     pyautogui.press('enter')
     pyautogui.moveTo(x=827, y=587)
     pyautogui.click()
+
 
 client = TelegramClient(username, api_id, api_hash)
 
@@ -66,6 +68,7 @@ async def normal_handler(event):
 client.start()
 client.run_until_disconnected()
 print("Client Created")
+
 
 
 
