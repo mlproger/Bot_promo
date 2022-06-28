@@ -40,29 +40,30 @@ client = TelegramClient(username, api_id, api_hash)
 async def normal_handler(event):
 
     mes = res(event.message.to_dict()['message'])
-    await moveC(mes)
-    print(mes)
+    await moveC("".join(mes))
+    print("".join(mes))
+
 
 @client.on(events.NewMessage(chats=('https://t.me/only_zoom')))
 async def normal_handler(event):
 
     mes = res(event.message.to_dict()['message'])
-    await moveC(mes)
-    print(mes)
+    await moveC("".join(mes))
+    print("".join(mes))
 
 @client.on(events.NewMessage(chats=('https://t.me/drgn_vegas')))
 async def normal_handler(event):
 
     mes = res(event.message.to_dict()['message'])
-    await moveC(mes)
-    print(mes)
+    await moveC("".join(mes))
+    print("".join(mes))
 
 @client.on(events.NewMessage(chats=('https://t.me/mandarinhalava')))
 async def normal_handler(event):
 
     mes = res(event.message.to_dict()['message'])
-    await moveC(mes)
-    print(mes)
+    await moveC("".join(mes))
+    print("".join(mes))
 
 
 client.start()
