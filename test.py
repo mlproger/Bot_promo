@@ -22,7 +22,7 @@ username = config['Telegram']['username']
 
 
 def res(s):
-    a = re.findall(r'[A-Z0-1]', s)
+    a = re.findall(r'[A-Z0-9]', s)
     return a[0:8]
 
 async def moveC(s):
