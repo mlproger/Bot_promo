@@ -11,7 +11,6 @@ from telethon.tl.types import (PeerChannel)
 config = configparser.ConfigParser()
 config.read("config.ini")
 
-# Setting configuration values
 api_id = config['Telegram']['api_id']
 api_hash = config['Telegram']['api_hash']
 
@@ -33,7 +32,6 @@ async def moveC(s):
     pyautogui.moveTo(x=827, y=587)
     pyautogui.click()
 
-# Create the client and connect
 client = TelegramClient(username, api_id, api_hash)
 
 @client.on(events.NewMessage(chats=('https://t.me/drgn_lol')))
@@ -71,7 +69,6 @@ print("Client Created")
 
 
 
-# Ensure you're authorized
 if not client.is_user_authorized():
     client.send_code_request(phone)
     try:
