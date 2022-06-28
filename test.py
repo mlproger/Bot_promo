@@ -1,5 +1,6 @@
 import configparser
 import re
+import time
 import pyautogui
 from telethon import TelegramClient, sync
 from telethon.errors import SessionPasswordNeededError
@@ -64,6 +65,13 @@ async def normal_handler(event):
     print("".join(mes))
 
 @client.on(events.NewMessage(chats=('https://t.me/mandarinhalava')))
+async def normal_handler(event):
+
+    mes = res(event.message.to_dict()['message'])
+    await moveC("".join(mes))
+    print("".join(mes))
+
+@client.on(events.NewMessage(chats=('https://t.me/testtestforkw')))
 async def normal_handler(event):
 
     mes = res(event.message.to_dict()['message'])
