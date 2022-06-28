@@ -26,11 +26,16 @@ def res(s):
     return a[0:8]
 
 async def moveC(s):
-    pyautogui.moveTo(x=809, y=750)
+    time.sleep(0.1)
+    pyautogui.moveTo(x=642, y=740)
+    time.sleep(0.1)
     pyautogui.click()
-    pyautogui.write(s)
+    time.sleep(0.1)
+    pyautogui.write('TEST')
+    time.sleep(0.1)
     pyautogui.press('enter')
-    pyautogui.moveTo(x=827, y=587)
+    time.sleep(0.1)
+    pyautogui.moveTo(x=826, y=626)
     pyautogui.click()
 
 
